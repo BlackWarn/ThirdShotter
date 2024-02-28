@@ -29,7 +29,6 @@ public class PlayerHealth : MonoBehaviour
         gameplayUI.SetActive(false);
         gameOverScreen.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
-        GetComponent<FireballCaster>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;
     }
     private void DrawHealthBar()

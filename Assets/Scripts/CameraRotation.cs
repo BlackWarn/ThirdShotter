@@ -6,6 +6,12 @@ public class CameraRotation : MonoBehaviour
     public float minAngle;
     public float maxAngle;
     public float RotationSpeed;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
     private void Update()
     {
         transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y + Time.deltaTime * RotationSpeed * Input.GetAxis("Mouse X"), 0);

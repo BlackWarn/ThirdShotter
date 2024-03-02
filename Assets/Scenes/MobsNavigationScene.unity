@@ -815,6 +815,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1003908533762681049, guid: 975a51ed1848df143b9c57b00acb1f35,
+        type: 3}
+      propertyPath: m_Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003908533762681049, guid: 975a51ed1848df143b9c57b00acb1f35,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003908533762681049, guid: 975a51ed1848df143b9c57b00acb1f35,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.1171875
+      objectReference: {fileID: 0}
     - target: {fileID: 4018107057697173011, guid: 975a51ed1848df143b9c57b00acb1f35,
         type: 3}
       propertyPath: m_LocalPosition.z

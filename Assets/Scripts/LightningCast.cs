@@ -6,19 +6,17 @@ public class LightningCast : MonoBehaviour
 {
     public float Damage = 1f;
     public float Range = 100f;
-    private static float timeStart = 5f;
+    private float timeStart = 5f;
     private float timeFix = 5f;
 
     public Camera Mcamera;
     public GameObject LigtningVisible;
-
-    private LineRenderer _lightning;
     
     private void Update()
     {
         Timer();
         LightningShoot();
-        Debug.Log(timeStart);
+        //Debug.Log(timeStart);
     }
     private void Casting()
     {
@@ -42,7 +40,6 @@ public class LightningCast : MonoBehaviour
             if (timeStart <= 0)
             {
                 Invoke("LigtningYesVisible", 1.5f);
-                Casting();
                 timeStart = timeFix;
             }
         }
@@ -50,6 +47,7 @@ public class LightningCast : MonoBehaviour
     private void LigtningYesVisible()
     {
         LigtningVisible.SetActive(true);
+        Casting();
         Invoke("LigtningNotVisible", 1f);
     }
     private void LigtningNotVisible()

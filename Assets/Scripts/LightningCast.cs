@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class LightningCast : MonoBehaviour
 {
-    public float Damage = 1f;
+    public float Damage = 50f;
     public float Range = 100f;
     private float timeStart = 5f;
     private float timeFix = 5f;
 
     public Camera Mcamera;
     public GameObject LigtningVisible;
-    
+
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         Timer();
@@ -23,7 +27,10 @@ public class LightningCast : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(Mcamera.transform.position, Mcamera.transform.forward, out hit, Range))
         {
-            Debug.Log(hit.transform.name);
+            if (hit.collider.gameObject.GetComponent<EnemyHealth>())
+            {
+                hit.collider.gameObject.GetComponent<EnemyHealth>().playerDamage();
+            }
         }
     }
     private void Timer()

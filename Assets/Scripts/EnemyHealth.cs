@@ -5,12 +5,10 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float value = 100;
-    public void DealDamage(float damage)
+    public LightningCast lightningCast;
+
+    public void playerDamage() 
     {
-        value -= damage;
-        if (value <= 0)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }

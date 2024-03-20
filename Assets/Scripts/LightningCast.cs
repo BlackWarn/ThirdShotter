@@ -11,7 +11,8 @@ public class LightningCast : MonoBehaviour
 
     public Camera Mcamera;
     public GameObject LigtningVisible;
-    public SoundManagerPlayer soundManagerPlayer;
+    [SerializeField] private SoundManagerPlayer soundManagerPlayer;
+    [SerializeField] private Animator animator;
 
     private void Update()
     {
@@ -43,6 +44,7 @@ public class LightningCast : MonoBehaviour
         {
             if (timeStart <= 0)
             {
+                animator.SetTrigger("Attack");
                 Invoke("LigtningYesVisible", 1.5f);
                 timeStart = timeFix;
             }
@@ -57,6 +59,7 @@ public class LightningCast : MonoBehaviour
     }
     private void LigtningNotVisible()
     {
+        animator.ResetTrigger("Attack");
         LigtningVisible.SetActive(false);
     }
 }

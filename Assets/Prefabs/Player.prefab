@@ -899,6 +899,7 @@ MonoBehaviour:
   Mcamera: {fileID: 5968140906730195298}
   LigtningVisible: {fileID: 7226581554672138473}
   soundManagerPlayer: {fileID: 4002596717402636523}
+  animator: {fileID: 6372403392403692306}
 --- !u!114 &3526503292103818931
 MonoBehaviour:
   m_ObjectHideFlags: 0

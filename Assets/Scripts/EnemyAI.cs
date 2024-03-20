@@ -7,8 +7,10 @@ public class EnemyAI : MonoBehaviour
 {
     public List<Transform> patrolPoints;
     public PlayerController player;
+    public EnemyHealth enemyHealth;
     public float viewAngle;
     public float damage = 30;
+    public bool enemyDead = true;
 
     private NavMeshAgent _navMeshAgent;
     private bool _isPlayerNoticed;
@@ -26,10 +28,13 @@ public class EnemyAI : MonoBehaviour
     }
     private void Update()
     {
-        NoticePlayerUpdate();
-        ChaseUpdate();
-        AttackUpdate();
-        PatrolUpdate();
+        if (enemyDead == true)
+        {
+            NoticePlayerUpdate();
+            ChaseUpdate();
+            AttackUpdate();
+            PatrolUpdate();
+        }
     }
     private void AttackUpdate()
     {

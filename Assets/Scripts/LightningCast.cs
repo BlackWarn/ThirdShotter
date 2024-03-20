@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class LightningCast : MonoBehaviour
 {
-    public float Damage = 50f;
+    public float damage = 50f;
     public float Range = 100f;
-    private float timeStart = 5f;
-    private float timeFix = 5f;
+    public float timeStart = 5f;
+    public float timeFix = 5f;
 
     public Camera Mcamera;
     public GameObject LigtningVisible;
+    public SoundManagerPlayer soundManagerPlayer;
 
-    private void Start()
-    {
-        
-    }
     private void Update()
     {
         Timer();
         LightningShoot();
-        //Debug.Log(timeStart);
+        //Debug.Log(damage);
     }
     private void Casting()
     {
@@ -55,6 +52,7 @@ public class LightningCast : MonoBehaviour
     {
         LigtningVisible.SetActive(true);
         Casting();
+        soundManagerPlayer.LightningShot();
         Invoke("LigtningNotVisible", 1f);
     }
     private void LigtningNotVisible()

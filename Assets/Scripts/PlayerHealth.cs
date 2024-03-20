@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public RectTransform valueRectTransform;
     public GameObject gameplayUI;
     public GameObject gameOverScreen;
+    [SerializeField] private Animator animator;
 
     private float _maxValue;
     private void Start()
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         gameOverScreen.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;
+        animator.SetBool("playerDeath", true);
     }
     private void DrawHealthBar()
     {

@@ -8,13 +8,13 @@ public class PlayerController : MonoBehaviour
 
 
     [SerializeField] private Animator animator;
-    public LightningCast LightningCast;
+    public LightningCast lightningCast;
 
     private Vector3 _moveVector3;
     private float _fallVelocity = 0;
     private CharacterController _characterController;
-    private float timeStart = 5.0f;
-    private float timeFix = 5f;
+    //private float timeStart = 5.0f;
+    //private float timeFix = 5f;
 
 
     private void Start()
@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         MoveUpdate();
-        Timer();
+        //Timer();
+        //Debug.Log(lightningCast.timeStart);
     }
     private void FixedUpdate()
     {
@@ -34,15 +35,14 @@ public class PlayerController : MonoBehaviour
     private void InitComponentLinks()
     {
         _characterController = GetComponent<CharacterController>();
-        LightningCast = GetComponent<LightningCast>();
     }
-    private void Timer()
-    {
-        if (timeStart >= 0)
-        {
-            timeStart -= Time.deltaTime;
-        }
-    }
+    //private void Timer()
+    //{
+        //if (timeStart >= 0)
+        //{
+            //timeStart -= Time.deltaTime;
+        //}
+    //}
     public void MoveUpdate()
     {
         var runningDir = 0;
@@ -69,10 +69,10 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            if (timeStart <= 0)
+            if (lightningCast.timeStart <= 0)
             {
                 runningDir = 5;
-                timeStart = timeFix;
+                //timeStart = timeFix;
             }
         }
         //Debug.Log(timeStart);

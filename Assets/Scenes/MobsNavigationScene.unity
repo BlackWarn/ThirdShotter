@@ -4370,9 +4370,9 @@ Transform:
   - {fileID: 695288440}
   - {fileID: 1355313745}
   - {fileID: 614248548}
-  - {fileID: 2087685384}
   - {fileID: 1925179794}
   - {fileID: 1628940}
+  - {fileID: 2087685384}
   - {fileID: 648188861}
   - {fileID: 1054988999}
   - {fileID: 1869433042}
@@ -5336,7 +5336,7 @@ PrefabInstance:
     - target: {fileID: 5968140907616366331, guid: 975a51ed1848df143b9c57b00acb1f35,
         type: 3}
       propertyPath: speed
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5968140907616366331, guid: 975a51ed1848df143b9c57b00acb1f35,
         type: 3}

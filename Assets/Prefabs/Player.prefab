@@ -842,7 +842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 9.8
   jumpForce: 0
-  speed: 10
+  speed: 5
   animator: {fileID: 6372403392403692306}
   lightningCast: {fileID: 0}
 --- !u!143 &5968140907616366328
